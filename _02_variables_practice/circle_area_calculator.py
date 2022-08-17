@@ -13,8 +13,14 @@ if __name__ == '__main__':
     
     # Ask the user for the radius in pixels and store it in a variable
     # simpledialog.askinteger()
-    
+    RP = simpledialog.askinteger('Hi', 'What is the radius in pixels?')
     # Make a new turtle
+    Teal=turtle.Turtle()
+    Teal.circle(RP)
+    Teal.penup()
+    Teal.goto(64, 32)
+    A = math.pi*RP*RP
+    Teal.write(A)
     
     # Have your turtle draw a circle with the correct radius
     # my_turtle.circle()
@@ -27,8 +33,9 @@ if __name__ == '__main__':
     # Hint, you can use math.pi
     
     # Write the area of your circle using the turtle .write() method
-    # my_turtle.write(arg="area = " + str(area), move=True, align='left', font=('Arial',8,'normal'))
-
+    Teal.write(arg="area = " + str(A), move=True, align='left', font=('Arial',8,'normal'))
+    Teal.hideturtle()
+    turtle.done()
     # Hide your turtle
 
     # Call turtle.done()
